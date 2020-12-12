@@ -1,16 +1,41 @@
-import React from 'react';
-import {View, Image, TouchableOpacity} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import {View, Image, TouchableOpacity, ScrollView, FlatList} from 'react-native';
+import getPostagens from '../api/feed';
+import estilo from './estilo';
 
-const Home = () => {
+const Home = ({navigation}) => {
+
+    const [post, setPosts]= useState('');
+    useEffect(() => {
+        getPostagens(setPosts);
+    },[])
     return (
-        <View>
-            <View>
+        <ScrollView style={estilo.container}>
+            <FlatList
+                data={post}
+                keyExtractor={(item, index) => index.toString ()}
+                renderItem= {({item}) => (
+                    <View style={estilo.posts}> 
                 <Image 
-                source={require('../../../Hair/assets/images/H.png')}
-                style={{width: 110, height: 110, borderRadius: 15}}
+                source={{uri: item.image}}
+                style={estilo.post1}
+                />
+                <Image 
+                source={{uri: item.image}}
+                style={estilo.post1}
+                /><Image 
+                source={{uri: item.image}}
+                style={estilo.post1}
+                /><Image 
+                source={{uri: item.image}}
+                style={estilo.post1}
                 />
             </View>
-        </View>
+            
+                )} 
+            />
+            
+        </ScrollView>
     )
 }
 

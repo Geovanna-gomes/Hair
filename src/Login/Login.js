@@ -9,7 +9,7 @@ import {
     from 'react-native';
 import estilo from './estilo';
     
-const Login = () => {
+const Login = ({navigation}) => {
     return(
         <ImageBackground 
             source={require('../../assets/images/bg.jpg')}
@@ -22,7 +22,7 @@ const Login = () => {
             </View>
             <View style={estilo.inputs}>
                 <TextInput
-                    placeholder='E-mail ou Usuario'
+                    placeholder='E-mail ou Usuário'
                     style={estilo.input}
                 />
                 <TextInput
@@ -36,7 +36,9 @@ const Login = () => {
                             style={{width: 35, height: 35}}
                         />
                     </TouchableOpacity>
-                    <TouchableOpacity style={estilo.botaoEntrar}>
+                    <TouchableOpacity
+                        onPress={() => navigation.replace('Home') } 
+                    style={estilo.botaoEntrar}>
                         <Image
                             source={require('../../assets/images/user.png')}
                             style={{width: 35, height: 35}}
