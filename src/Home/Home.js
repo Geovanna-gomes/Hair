@@ -10,31 +10,22 @@ const Home = ({navigation}) => {
         getPostagens(setPosts);
     },[])
     return (
-        <ScrollView style={estilo.container}>
-            <FlatList
-                data={post}
-                keyExtractor={(item, index) => index.toString ()}
-                renderItem= {({item}) => (
-                    <View style={estilo.posts}> 
-                <Image 
-                source={{uri: item.image}}
-                style={estilo.post1}
-                />
-                <Image 
-                source={{uri: item.image}}
-                style={estilo.post1}
-                /><Image 
-                source={{uri: item.image}}
-                style={estilo.post1}
-                /><Image 
-                source={{uri: item.image}}
-                style={estilo.post1}
+        <ScrollView style={estilo.scroll}>
+            <View style={estilo.container}>
+                <FlatList
+                    data={post}
+                    numColumns={2}
+                    keyExtractor={(item, index) => index.toString ()}
+                    renderItem= {({item}) => (
+                        <View style={estilo.posts}> 
+                            <Image 
+                                source={{uri: item.image}}
+                                style={estilo.post1}
+                            />
+                        </View>
+                    )} 
                 />
             </View>
-            
-                )} 
-            />
-            
         </ScrollView>
     )
 }

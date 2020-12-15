@@ -42,7 +42,18 @@ const estilo = StyleSheet.create({
         borderRadius: 15,
         alignItems: 'center'
 
+    },
+    botaoEsqueci: {
+        alignItems: 'center',
+        marginTop: 90,
+    },
+    textoEsqueci: {
+        color: 'rgb(0, 90, 250)',
+        textDecorationColor: 'rgb(0, 90, 250)',
+        textDecorationLine: 'underline',
+        textDecorationStyle: 'solid'
     }
+
 
 })
 

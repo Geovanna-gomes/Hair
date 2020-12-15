@@ -5,7 +5,8 @@ import {
     Text,
     Image,
     TouchableOpacity,
-    ImageBackground}
+    ImageBackground,
+    TextComponent}
     from 'react-native';
 import estilo from './estilo';
     
@@ -43,6 +44,11 @@ const Login = ({navigation}) => {
                             source={require('../../assets/images/user.png')}
                             style={{width: 35, height: 35}}
                         />
+                    </TouchableOpacity>
+                </View>
+                <View style={estilo.botaoEsqueci}> 
+                    <TouchableOpacity>
+                        <Text style={estilo.textoEsqueci}>Esqueceu a senha?</Text>
                     </TouchableOpacity>
                 </View>
             </View>

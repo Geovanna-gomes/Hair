@@ -2,6 +2,9 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 
 const estilo = StyleSheet.create({
+    scroll: {
+        flex: 1
+    },
     container: {
         flex: 1,
         alignItems: 'center',
@@ -9,19 +12,14 @@ const estilo = StyleSheet.create({
         backgroundColor: 'white',
     },
     posts: {
-        justifyContent: 'space-around',
-        flexDirection: "row",
-        flexWrap: 'wrap',
-        flex: 1
+        margin: 7
     },
     post1: {
         width: 150,
-        height: 150,
+        height: 200,
         padding: 5,
         borderRadius: 15,
-        alignItems: 'center',
-        backgroundColor: 'black',
-        marginTop: 15
+        marginTop: 15,
     },
 })
 
