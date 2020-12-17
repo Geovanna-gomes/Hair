@@ -52,7 +52,8 @@ const estilo = StyleSheet.create({
         textDecorationColor: 'rgb(0, 90, 250)',
         textDecorationLine: 'underline',
         textDecorationStyle: 'solid'
-    }
+    },
+   
 
 
 })
