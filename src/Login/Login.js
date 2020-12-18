@@ -38,7 +38,7 @@ const Login = ({navigation}) => {
                         />
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => navigation.replace('Home') } 
+                        onPress={() => navigation.replace('Tab') } 
                     style={estilo.botaoEntrar}>
                         <Image
                             source={require('../../assets/images/user.png')}

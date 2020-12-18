@@ -2,10 +2,11 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Feather'
 import Home from '../Home/Home';
+import Perfil from '../Perfil/Perfil';
 
 const NavegacaoTabs = createBottomTabNavigator ();
 
-const Tab = ({navigation}) => {
+const Tab = ({route, navigation}) => {
     return(
         <NavegacaoTabs.Navigator
             screenOptions={({ route }) => ({
@@ -14,8 +15,14 @@ const Tab = ({navigation}) => {
         
                 switch (route.name) {
                     case 'Home':
-                    iconName = 'home';
-                    break;
+                        iconName = 'home';
+                        break;
+                    case 'Perfil':
+                        iconName = 'users';
+                        break;
+                    default:
+                        iconName = 'circle';
+                        break;
                 }
                 return <Icon name={iconName} size={size} color={color} />;
 
@@ -28,7 +35,7 @@ const Tab = ({navigation}) => {
               }} 
             >
             <NavegacaoTabs.Screen name="Home" component={Home} navigation={navigation} />
-            {/*<NavegacaoTabs.Screen name="Home" component={Home} navigation={navigation} />*/}
+            <NavegacaoTabs.Screen name="Perfil" component={Perfil} navigation={navigation} />
         </NavegacaoTabs.Navigator>
     )
 }

@@ -25,6 +25,7 @@ const estilo = StyleSheet.create({
         padding: 5,
         borderRadius: 15,
         marginTop: 15,
+        marginBottom: 5,
     },
     post2: {
         width: 300,
